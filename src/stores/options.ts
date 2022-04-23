@@ -1,0 +1,52 @@
+import { defineStore } from "pinia";
+
+export const useOptionsStore = defineStore({
+  id: "options",
+  state: () => ({
+    breakfast: [
+      "Eggs",
+      "Bacon",
+      "Bread",
+      "Milk",
+      "Tomato",
+      "Cheese",
+      "Cucumber",
+      "Onion",
+      "Butter",
+      "Apple",
+      "Banana",
+    ],
+    dinner: [
+      "Eggs",
+      "Bacon",
+      "Bread",
+      "Milk",
+      "Tomato",
+      "Cheese",
+      "Cucumber",
+      "Onion",
+      "Butter",
+      "Potato",
+      "Carrot",
+      "Chicken breast",
+      "Rice",
+      "Beef",
+      "Corn",
+    ],
+    somethingSweet: [
+      "Milk",
+      "Sugar",
+      "Flour",
+      "Banana",
+      "Apple",
+      "Cocoa",
+      "Nuts",
+      "Chocolate",
+    ],
+  }),
+  getters: {
+    getOptionsBreakfast: (state) => state.breakfast,
+    getOptionsDinner: (state) => state.dinner,
+    getOptionsSomethingSweet: (state) => state.somethingSweet,
+  },
+});
